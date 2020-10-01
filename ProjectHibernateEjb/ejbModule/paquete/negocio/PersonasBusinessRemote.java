@@ -1,0 +1,29 @@
+package paquete.negocio;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+
+import paquete.entity.Persona;
+
+@Remote
+public interface PersonasBusinessRemote {
+	
+	public String test();
+
+	public List<Persona> listar();
+	
+	public int extraerMax();
+	
+	public int extraerMin();
+	
+	public long countPersonas();
+	
+	public Persona extraerPorId(Persona per);
+	
+	public void insertarPersona(Persona per);
+	
+	public void modificarPersona(Persona per);
+	
+	public void eliminarPersona(Persona per);
+}
